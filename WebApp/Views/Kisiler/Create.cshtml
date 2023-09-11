@@ -1,0 +1,29 @@
+﻿@using WebApp.Data;
+@model Kisi
+<h1>Kişiler 2</h1>
+<h3>Yeni Kisi Ekle</h3>
+<hr />
+
+<form asp-action="create" method="post">
+    <label asp-for="Adi"></label><br />
+    <input asp-for="Adi" placeholder="adinizi girin" class="form-control" />
+    <span asp-validation-for="Adi" class="text-danger"></span><br />
+
+    <label asp-for="Yas"></label><br />
+    <input asp-for="Yas" class="form-control" />
+    <span asp-validation-for="Yas" class="text-danger"></span><br />
+
+    <label asp-for="Cinsiyet"></label><br />
+    <input asp-for="Cinsiyet" />
+    <span asp-validation-for="Cinsiyet" class="text-danger"></span><br />
+
+
+    <input type="submit" value="Kaydet" />
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+

@@ -1,0 +1,18 @@
+﻿<h1>User Manager</h1>
+<hr />
+<h4>Create New User</h4>
+@* <form asp-controller="UserManager" asp-action="Create" method="post"> *@
+<form asp-action="Create" method="post">
+    <b>Name</b><br />
+    <input type="text" name="name" class="form-control" /><br />
+
+    <b>Surname</b><br />
+    <input type="text" name="surname" class="form-control" /><br />
+
+    <b>Age</b><br />
+    <input type="text" name="age" class="form-control" /><br />
+
+
+    <input type="submit" value="Save" class="btn btn-primary" />
+
+</form>

@@ -1,0 +1,27 @@
+﻿@model List<UserModel>
+
+<h1>User Manager</h1>
+<hr />
+<a href="/UserManager/Create">Add New User</a>
+<br />
+<a asp-controller="UserManager" asp-action="Create">Add New User</a>
+<hr />
+<b>User Count = </b> @Model.Count
+
+<hr />
+
+<table class="table table-striped">
+    <tr>
+        <th>Name</th>
+        <th>Surname</th>
+        <th>Age</th>
+    </tr>
+    @foreach  (var item in Model)
+    {
+        <tr>
+            <td>@item.Name</td>
+            <td>@item.Surname</td>
+            <td>@item.Age</td>
+        </tr>
+    }
+</table>

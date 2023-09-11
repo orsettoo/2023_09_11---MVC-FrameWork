@@ -1,0 +1,17 @@
+﻿@model IEnumerable<KisiViewModel>
+
+    <h1>Kisiler 2</h1>
+    <a asp-controller="Kisiler2" asp-action="Create" class="btn btn-primary">Kişi Ekle </a>
+    <table class=" table table-striped" >
+        <tr>
+            <th>Id</th>
+            <th>@Html.DisplayNameFor(m=>m.TamAdi) </th>
+        </tr>
+        @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.TamAdi</td>
+        </tr>
+    }
+</table>

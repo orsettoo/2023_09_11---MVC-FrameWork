@@ -1,0 +1,22 @@
+﻿@using WebApp.Data;
+@model Kisi                 //WebApp.Data.Kisi
+
+<h1>Kişiler 2</h1>
+<h3>Yeni Kişi Ekle</h3>
+<hr />
+@using (Html.BeginForm("Create", "Kisiler2", FormMethod.Post))
+{
+
+    @Html.EditorFor(m=>m.Yas)
+}
+<br />
+<br />
+<br />
+<br />
+<hr />
+<input type="text" name="txt1" class="form-control" value="Abc" />
+@Html.TextBox("txt2","Abc", htmlAttributes:new { @class="form-control"})
+@Html.CheckBox("ch_1",true)
+<hr />
+@Html.TextBoxFor(m=>m.Yas)
+
